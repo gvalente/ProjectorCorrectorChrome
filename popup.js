@@ -1,13 +1,16 @@
-// let toggle = document.getElementById("toggleOverlay");
-
-document.getElementById("toggleOverlay").onclick = function(element) {
+function callContentScript(method) {
   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     if (tabs.length > 0) {
-      chrome.tabs.sendMessage(tabs[0].id, { greeting: "hi from popup" });
+      chrome.tabs.sendMessage(tabs[0].id, { method: method });
     }
   });
-};
+}
 
-document.addEventListener("DOMContentLoaded", function() {
-  // popup in launched
+$("button").each(function() {
+  $(this).on("click", function() {
+    callContentScript($(this).attr("id"));
+  });
 });
+
+// popup in launched
+document.addEventListener("DOMContentLoaded", function() {});
