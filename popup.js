@@ -1,3 +1,4 @@
+// Send button click command to Content Script
 function callContentScript(method) {
   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     if (tabs.length > 0) {
@@ -6,11 +7,9 @@ function callContentScript(method) {
   });
 }
 
+// Set up button click events
 $("button").each(function() {
   $(this).on("click", function() {
     callContentScript($(this).attr("id"));
   });
 });
-
-// popup in launched
-document.addEventListener("DOMContentLoaded", function() {});

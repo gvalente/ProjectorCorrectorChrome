@@ -1,2 +1,0 @@
-- Add toolbar default icon to manifest.page_action
-- Add extention management assets to manifest.icons
