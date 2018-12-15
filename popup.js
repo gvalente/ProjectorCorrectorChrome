@@ -1,17 +1,13 @@
-let changeColor = document.getElementById("changeColor");
+// let toggle = document.getElementById("toggleOverlay");
 
-chrome.storage.sync.get("color", function(data) {
-  changeColor.style.backgroundColor = data.color;
-  changeColor.setAttribute("value", data.color);
-});
-
-// programatically injected content script
-// todo: go declarative when inserting the overlay?
-changeColor.onclick = function(element) {
-  let color = element.target.value;
+document.getElementById("toggleOverlay").onclick = function(element) {
   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
-    chrome.tabs.executeScript(tabs[0].id, {
-      code: 'document.body.style.backgroundColor = "' + color + '";'
-    });
+    if (tabs.length > 0) {
+      chrome.tabs.sendMessage(tabs[0].id, { greeting: "hi from popup" });
+    }
   });
 };
+
+document.addEventListener("DOMContentLoaded", function() {
+  // popup in launched
+});
