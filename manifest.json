@@ -1,0 +1,6 @@
+{
+  "name": "Projector Corrector",
+  "version": "0.1",
+  "description": "Chrome extension improving Figma contrast when projecting.",
+  "manifest_version": 2
+}
