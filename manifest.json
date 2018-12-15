@@ -2,5 +2,19 @@
   "name": "Projector Corrector",
   "version": "0.1",
   "description": "Chrome extension improving Figma contrast when projecting.",
+  "permissions": ["activeTab", "declarativeContent"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Projector Corrector"
+  },
+  "content_scripts": [
+    {
+      "matches": ["\u003Call_urls>"],
+      "run_at": "document_end",
+      "css": ["overLayer.css"],
+      "js": ["jquery-3.3.1.min.js", "contentScript.js"]
+    }
+  ],
+  "options_page": "options.html",
   "manifest_version": 2
 }
