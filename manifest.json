@@ -15,6 +15,5 @@
       "js": ["jquery-3.3.1.min.js", "contentScript.js"]
     }
   ],
-  "options_page": "options.html",
   "manifest_version": 2
 }

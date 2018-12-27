@@ -1,7 +1,7 @@
 // OverLayer constructor
 function OverLayer() {
   this.color = "#000";
-  this.alpha = 0.5;
+  this.alpha = 0.1;
   this.alphaOffset = 0.02;
 }
 let overLayer = {};
