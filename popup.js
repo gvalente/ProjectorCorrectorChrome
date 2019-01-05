@@ -13,3 +13,4 @@ $("button").each(function() {
     callContentScript($(this).attr("id"));
   });
 });
+// use data- attribute to be more intentional about what the action is
