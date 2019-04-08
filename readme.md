@@ -4,6 +4,11 @@ Adjusting to an external display is not an impossible task, but plugging your la
 
 > Do you design with Figma? Use the web app and this extension when presenting!
 
+## Installation
+
+Install the Chrome plugin from the Chrome extension web store.
+https://chrome.google.com/webstore/detail/projector-corrector/kbbnlljkfkmjpedgjmpkefjhmjfnblkd
+
 ## Usage
 
 Toggle the overlay with the top <kbd> </kbd> button. This covers your web content with a 10% alpha black overlay to improve contrast on blown out external presentation devices. Need it darker or lighter? Use the <kbd>+</kbd> or <kbd>-</kbd> buttons to adjust the opacity of the overlay.
